@@ -12,6 +12,10 @@ body{
     font-weight: 700;
 }
 
+.flex{
+    display: flex;
+}
+
 .clearfix{
     content: "";
     display: table;
@@ -23,7 +27,7 @@ img{
 }
 
 .icon, .icon-normal{
-    width: 35px;
+    width: 25px;
     height: auto;
     vertical-align: middle;
 }
@@ -43,7 +47,7 @@ ul{
 .separatore{
     width: 100%;
     height: 15px;
-    border-bottom: 2px solid #6e6e6e;
+    border-bottom: 1px solid #6e6e6e;
     margin-bottom: 15px;
 }
 
@@ -64,6 +68,24 @@ ul{
     border-color: white;
 }
 
+/* hover */
+.white-hover:hover{
+    color: white;
+    cursor: pointer;
+}
+
+li:hover img, .user .white-hover:hover img{
+    filter: none;
+}
+
+.playlist-menu li:hover div{
+    background-color: white;
+}
+
+.underline-hover:hover{
+    text-decoration: underline;
+}
+
 /* MAIN */
 main{
     height: calc( 100vh - 100px );
@@ -81,11 +103,16 @@ main{
     height: 100px;
     width: calc( 100% - 300px );
     background-color: rgba(0, 0, 0, 0.5);
-    padding: 20px 5px 0 0;
+    padding: 20px 15px 0 0;
 }
 
 .overlay .btn{
     float: right;
+}
+
+.btn-white:hover{
+    cursor: pointer;
+    transform: scale(105%);
 }
 
 /* logo */
@@ -104,8 +131,6 @@ main{
     display: flex;
     flex-direction: column;
     font-size: 15px;
-
-    /* test */
     background-color: black;
 }
 .search-menu{
@@ -148,7 +173,7 @@ main{
     height: 90px;
 }
 
-.user .icon-normal, .icon{
+.user .icon-normal{
     width: 25px;
 }
 
@@ -164,6 +189,7 @@ main{
     width: calc( 100% - 300px );
     float: left;
     overflow-y: auto;
+    padding-top: 100px;
 
     /* test */
     background-color: red;
@@ -177,3 +203,69 @@ footer{
     /* test */
     background-color: violet;
 }
+
+.footer-wrapper{
+    width: 100%;
+    height: 100%;
+    justify-content: space-between;
+}
+
+
+.name-song, .volume{
+    width: 10%;
+    height: 100%;
+    padding: 20px 10px;
+    align-items: center;
+}
+
+.name-song{
+    
+    justify-content: space-between;
+    /* test */
+    background-color: blue;
+}
+
+.durata-canzone{
+    width: 50%;
+
+    /* test */
+    background-color: green;
+    height: 100%;
+}
+
+.volume{
+
+    /* test */
+    background-color: yellow;
+}
+
+/* sezione sinistra */
+.song-image-footer{
+    margin-right: 10px;
+}
+
+.song-image-footer img{
+    width: 50px;
+    height: auto;
+}
+
+.song-info-footer{
+    margin-right: 20px;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.song-info-footer:last-child{
+    font-size: 13px;
+}
+
+.name-song .icon-footer{
+    margin: 0 10px;
+}
+
+.icon-footer-container{
+    flex-wrap: wrap;
+}
+/* sezione centrale */
+
+/* sezione destra */
