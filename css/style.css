@@ -10,16 +10,13 @@ body{
     font-family: 'Montserrat', sans-serif;
     color: #6e6e6e;
     font-weight: 700;
+    width: 100%;
+    height: 100vh;
+
 }
 
 .flex{
     display: flex;
-}
-
-.clearfix{
-    content: "";
-    display: table;
-    clear: both;
 }
 
 img{
@@ -82,17 +79,71 @@ li:hover img, .user .white-hover:hover img{
     background-color: white;
 }
 
+.space:hover .add-playlist{
+    background-color: white;
+}
+
 .underline-hover:hover{
     text-decoration: underline;
 }
 
+/* border-green */
+.border-green{
+    position: relative;
+}
+
+.border-green:hover .border-left-green{
+    display: block;
+}
+
+/* barra volume/ canzone */
+.song-bar{
+    border-radius: 10px;
+    height: 8px;
+}
+
+.song-bar:hover{
+    cursor: pointer;
+}
+
+.song-bar:hover .song-bar-up{
+    background-color: #adff2f;
+}
+
+.song-bar-bottom, .song-bar-bottom-player{
+    background-color: #5a5a5a;
+}
+
+.bar .song-bar-bottom{
+    width: 130px;
+}
+
+.bar .song-bar-bottom-player{
+    width: 100%;
+}
+
+.song-bar-up{
+    background-color: #c1c1c1;
+    width: 20%;
+}
+
+.bar-player{
+    justify-content: center;
+}
+
+.bar-player .bar{
+    margin: 0 20px;
+    width: 50%;
+}
+
 /* MAIN */
 main{
-    height: calc( 100vh - 100px );
+    height: calc( 100% - 100px );
     width: 100%;
 
     /* test */
     background-color: chocolate;
+    overflow: hidden;
 }
 
 /* OVERLAY */
@@ -133,25 +184,45 @@ main{
     font-size: 15px;
     background-color: black;
 }
+
+/* sezione menu ricerca */
 .search-menu{
     height: 170px;
 }
 
 .search-menu li{
-    margin: 10px 0;
+    padding: 5px 0;
 }
 
+.border-left-green{
+    display: none;
+    position: absolute;
+    top: 0;
+    left: -20px;
+    border-left: 3px solid #adff2f;
+    height: 100%;
+}
+
+/* sezione playlist */
 .playlist-menu{
     flex-grow: 1;
-    overflow-y: auto;
-    height: 200px;
+    flex-direction: column;
+    height: calc(100% - 260px);
 }
 
 .playlist-menu li{
     margin: 15px 0;
 }
 
-.playlist-menu li div{
+.playlist .space{
+    margin: 10px 0;
+}
+
+.scorrimento{
+    width: 100%;
+}
+
+.add-playlist{
     display: inline-block;
     height: 40px;
     width: 40px;
@@ -163,13 +234,16 @@ main{
     font-size: 20px;
 }
 
+.playlist-menu div ul{
+    overflow-y: auto;
+    width: 100%;
+}
+
 .playlist-menu .big-font{
     font-size: 20px;
 }
 
 .user{
-
-    /* test */
     height: 90px;
 }
 
@@ -180,7 +254,6 @@ main{
 .user .background{
    background-color: #6e6e6e;
    border-radius: 50%;
-
 }
 
 /* content */
@@ -199,9 +272,8 @@ main{
 footer{
     height: 100px;
     width: 100%;
-
-    /* test */
-    background-color: violet;
+    overflow: hidden;
+    background-color: #282828;
 }
 
 .footer-wrapper{
@@ -212,31 +284,21 @@ footer{
 
 
 .name-song, .volume{
-    width: 10%;
+    width: 20%;
     height: 100%;
     padding: 20px 10px;
+    justify-content: flex-end;
     align-items: center;
 }
 
 .name-song{
-    
     justify-content: space-between;
-    /* test */
-    background-color: blue;
 }
 
 .durata-canzone{
     width: 50%;
-
-    /* test */
-    background-color: green;
     height: 100%;
-}
-
-.volume{
-
-    /* test */
-    background-color: yellow;
+    justify-content: space-evenly;
 }
 
 /* sezione sinistra */
@@ -250,7 +312,6 @@ footer{
 }
 
 .song-info-footer{
-    margin-right: 20px;
     flex-direction: column;
     justify-content: center;
 }
@@ -266,6 +327,37 @@ footer{
 .icon-footer-container{
     flex-wrap: wrap;
 }
+
 /* sezione centrale */
+.durata-canzone{
+    flex-direction: column;
+}
+
+.icon-footer-player{
+    justify-content: center;
+    align-items: center;
+}
+
+.icon-footer-player div{
+    margin: 0 10px;
+    font-size: 20px;
+}
+
+div.big-icon-footer{
+    font-size: 30px;
+}
+
+div.big-icon-footer:hover{
+    transform: scale(1.2);
+}
 
 /* sezione destra */
+.volume .icon-footer{
+    margin: 0 10px;
+}
+
+.bar{
+    width: 30%;
+    height: 100%;
+    align-items: center;
+}
