@@ -97,8 +97,28 @@ li:hover img, .user .white-hover:hover img{
 
 /* barra volume/ canzone */
 .song-bar{
+    position: relative;
     border-radius: 10px;
     height: 4px;
+}
+
+.pallino{
+    display: none;
+    background-color: #c1c1c1;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    position: absolute;
+    top: -5.5px;
+    left: 100%;
+    transform: translateX(-95%);
+}
+
+.pallino-small{
+    width: 10px;
+    height: 10px;
+    top: -3px;
+
 }
 
 .song-bar:hover{
@@ -107,6 +127,10 @@ li:hover img, .user .white-hover:hover img{
 
 .song-bar:hover .song-bar-up{
     background-color: #adff2f;
+}
+
+.song-bar:hover .pallino{
+    display: block;
 }
 
 .song-bar-bottom, .song-bar-bottom-player{
@@ -148,9 +172,10 @@ main{
     top: 0;
     right: 0;
     height: 100px;
-    width: calc( 100% - 300px );
+    width: calc( 100% - 250px );
     background-color: rgba(0, 0, 0, 0.5);
     padding: 20px 15px 0 0;
+    z-index: 1;
 }
 
 .overlay .btn{
@@ -197,12 +222,20 @@ main{
 }
 
 .border-left-green{
-    display: none;
     position: absolute;
     top: 0;
     left: -20px;
     border-left: 3px solid #adff2f;
     height: 100%;
+}
+
+.border-bottom-green{
+    position: absolute;
+    bottom: -5px;
+    left: 50%;
+    transform: translateX(-50%);
+    border-bottom: 3px solid #adff2f;
+    width: 30%;
 }
 
 /* sezione playlist */
@@ -300,6 +333,28 @@ main{
 .song-container{
     width: 100%;
     flex-wrap: wrap;
+}
+
+.main-song-image{
+    position: relative;
+    cursor: pointer;
+}
+
+.main-song-image:hover img{
+    filter: opacity(0.5);
+}
+
+.main-song-image:hover .nascosto{
+    display: block;
+}
+
+.nascosto{
+    display: none;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 50px;
 }
 
 .content h3{
