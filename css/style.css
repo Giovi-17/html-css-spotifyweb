@@ -140,9 +140,6 @@ li:hover img, .user .white-hover:hover img{
 main{
     height: calc( 100% - 100px );
     width: 100%;
-
-    /* test */
-    background-color: chocolate;
     overflow: hidden;
 }
 
@@ -171,6 +168,7 @@ main{
     height: 100px;
     width: 80%;
     margin: auto;
+    margin-left: 0;
 }
 
 /* nav-section */
@@ -187,7 +185,8 @@ main{
 
 /* sezione menu ricerca */
 .search-menu{
-    height: 170px;
+    height: 130px;
+    margin-bottom: 20px;
 }
 
 .search-menu li{
@@ -207,7 +206,7 @@ main{
 .playlist-menu{
     flex-grow: 1;
     flex-direction: column;
-    height: calc(100% - 260px);
+    height: calc(100% - 330px);
 }
 
 .playlist-menu li{
@@ -245,6 +244,7 @@ main{
 
 .user{
     height: 90px;
+    background-color: black;
 }
 
 .user .icon-normal{
@@ -262,10 +262,59 @@ main{
     width: calc( 100% - 300px );
     float: left;
     overflow-y: auto;
-    padding-top: 100px;
+    padding: 100px 30px 0 30px;
+    flex-direction: column;
+    background-color: #141922;
+}
 
-    /* test */
-    background-color: red;
+.tasti{
+    align-self: center;
+    margin: 25px 0 0px 0;
+    max-width: 1000px;
+    justify-content: center;
+}
+
+.tasti ul{
+    align-self: center;
+}
+
+.tasti ul li{
+    margin: 0 10px;
+    font-size: 15px;
+}
+
+.title-content{
+    margin: 40px 0 30px 0;
+}
+
+.title-content div{
+    font-size: 12px;
+    margin-top: 5px;
+}
+
+.content h3{
+    color: white;
+    font-size: 25px;
+}
+
+.main-song{
+    flex-direction: column;
+    width: calc( ( 100% / 6 ) - 10px );
+    align-items: center;
+    margin-right: 10px;
+}
+
+.main-song img{
+    height: auto;
+}
+
+.main-song-title{
+    color: white;
+    margin: 10px 0;
+}
+
+.main-song-subtitle{
+    font-size: 15px;
 }
 
 /* FOOTER */
