@@ -12,7 +12,6 @@ body{
     font-weight: 700;
     width: 100%;
     height: 100vh;
-
 }
 
 .flex{
@@ -54,7 +53,7 @@ ul{
 }
 
 .btn-big{
-    font-size: 20px;
+    font-size: 15px;
     border: 1px solid;
     border-radius: 30px;
     padding: 15px 40px;
@@ -99,7 +98,7 @@ li:hover img, .user .white-hover:hover img{
 /* barra volume/ canzone */
 .song-bar{
     border-radius: 10px;
-    height: 8px;
+    height: 4px;
 }
 
 .song-bar:hover{
@@ -171,10 +170,14 @@ main{
     margin-left: 0;
 }
 
+.mini-logo{
+    display: none;
+}
+
 /* nav-section */
 .nav-section{
     height: 100%;
-    width: 300px;
+    width: 250px;
     float: left;
     padding: 20px 20px 0 20px;
     display: flex;
@@ -259,7 +262,7 @@ main{
 /* content */
 .content{
     height: 100%;
-    width: calc( 100% - 300px );
+    width: calc( 100% - 250px );
     float: left;
     overflow-y: auto;
     padding: 100px 30px 0 30px;
@@ -276,20 +279,27 @@ main{
 
 .tasti ul{
     align-self: center;
+    flex-wrap: wrap;
 }
 
 .tasti ul li{
     margin: 0 10px;
     font-size: 15px;
+    margin-bottom: 30px;
 }
 
 .title-content{
-    margin: 40px 0 30px 0;
+    margin: 20px 0 30px 0;
 }
 
 .title-content div{
     font-size: 12px;
     margin-top: 5px;
+}
+
+.song-container{
+    width: 100%;
+    flex-wrap: wrap;
 }
 
 .content h3{
@@ -331,17 +341,18 @@ footer{
     justify-content: space-between;
 }
 
+.container-image-title-footer{
+    margin-right: 10px;
+}
 
 .name-song, .volume{
-    width: 20%;
     height: 100%;
     padding: 20px 10px;
-    justify-content: flex-end;
     align-items: center;
 }
 
 .name-song{
-    justify-content: space-between;
+    justify-content: flex-start;
 }
 
 .durata-canzone{
@@ -400,13 +411,114 @@ div.big-icon-footer:hover{
     transform: scale(1.2);
 }
 
+.bar-player .durata{
+    font-size: 10px;
+}
+
 /* sezione destra */
 .volume .icon-footer{
     margin: 0 10px;
 }
 
 .bar{
-    width: 30%;
+    width: 100px;
     height: 100%;
     align-items: center;
+}
+
+/* media query -  Desktop First*/
+
+/*Range 1099px-700px  */
+@media screen and (max-width: 1099px){
+    .main-song{
+        width: calc( ( 100% / 4 ) - 20px);
+        margin-right: 20px;
+        margin-bottom: 10px;
+    }
+
+    .main-song-title{
+        font-size: 15px;
+    }
+
+    .bar-player .durata{
+        font-size: 13px;
+    }
+}
+
+/*Range 699px-601px  */
+@media screen and (max-width: 699px){
+    .main-song{
+        width: calc( ( 100% / 2 ) - 20px);
+    }
+
+    .main-song-title{
+        font-size: 20px;
+    }
+
+    .durata-canzone{
+        width: 30%;
+    }
+}
+
+/*Range 600px-1px  */
+@media screen and (max-width: 600px){
+    .logo{
+        display: none;
+    }
+
+    .mini-logo{
+        display: block;
+        width: 75%;
+        margin: 0 auto;
+        padding-top: 10px;
+    }
+
+    .mini-logo img{
+        height: auto;
+        margin: auto;
+    }
+
+    .nav-section{
+        width: 65px;
+        padding: 10px 10px 0 10px;
+        align-items: center;
+    }
+
+    .content{
+        width: calc( 100% - 65px);
+    }
+
+    .search-menu span, .playlist-menu, .user span{
+        display: none;
+    }
+
+    .search-menu{
+        flex-grow: 1;
+    }
+
+    .search-menu li img{
+        width: 35px;
+    }
+
+    .user{
+        justify-self: flex-start;
+    }
+
+    .btn-big {
+        font-size: 10px;
+        padding: 10px 30px;
+    }
+
+    .bar-player .bar {
+        margin: 0 10px;
+        width: 60%;
+    }
+
+    .bar .song-bar-bottom{
+        width: 120px;
+    }
+
+    .icon-footer{
+        font-size: 11px;
+    }
 }
