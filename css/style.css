@@ -307,7 +307,6 @@ main{
     align-self: center;
     margin: 25px 0 0px 0;
     max-width: 1000px;
-    justify-content: center;
 }
 
 .tasti ul{
@@ -559,21 +558,52 @@ div.big-icon-footer:hover{
         justify-self: flex-start;
     }
 
+    .overlay{
+        width: calc( 100% - 65px );
+    }
+
     .btn-big {
         font-size: 10px;
         padding: 10px 30px;
     }
 
+    .song-image-footer img{
+        width: 30px;
+        height: 30px;
+    }
+
     .bar-player .bar {
         margin: 0 10px;
         width: 60%;
+        min-width: 100px;
     }
 
     .bar .song-bar-bottom{
         width: 120px;
     }
 
+    .volume .bar{
+        height: 20px;
+    }
+
     .icon-footer{
         font-size: 11px;
+    }
+
+    .icon-footer-container .icon-footer{
+        display: none;
+    }
+
+    .volume{
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .volume .icon-footer{
+        display: none;
+    }
+
+    .volume .icon-footer:nth-child(3){
+        display: block;
     }
 }
